@@ -4,6 +4,9 @@ import java.util.stream.IntStream;
 
 public class Main {
 
+    // Java 11 - 'Data Classes' concept - as I understand, currently not available to use:
+    // record Alkene(Integer carbNo, String name) {};
+
     public static void main(String[] args) {
         // Java 9 - map literals
         // Java 10 - `var` keyword (instead of `Map<Integer, String>`)
@@ -13,7 +16,7 @@ public class Main {
 
 
         IntStream.range(2,5).forEach(
-                carbonNo -> {
+                (var carbonNo) -> {
                     printAlkaneInfo(alkanes, carbonNo);
                 }
         );
